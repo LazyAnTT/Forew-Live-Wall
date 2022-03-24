@@ -1,71 +1,40 @@
-# React | Typescript | Jest - application boilerplate
+# Forex live wall
 
-It's a template for React application with Typescript, Jest library and other stuff that can be helpful for You - feel free to use it!
- 
-1. [Instalation steps](#instalation) 
-2. [Available scripts](#scripts)
-3. [Technology stack](#technology)
-4. [Useful information](#information)
+### You can find project page here =>
 
-<a name="instalation" />
+<!-- ![Project GIF](src/assets/images/projectRecord.gif) -->
 
-### Instalation steps
+## Project architecture
 
-1. Clone this repository to destination folder.
+The app has two instances for tickers of the two currencies. In these you can only enter Latin letters. You can change the direction of the search by pressing ⇄ button between two inputs. The currencies data updates every 10 seconds. There are 6 types of historical charts available, varying by time frames.
 
-`git clone https://github.com/rkoziol/react-typescript-jest-boilerplate.git`
+The application has mobile adaptive layout.
 
-2. Install dependencies.
+If you have "Data request limit reached for today" error, you can switch apyKey in ./src/assets/data.ts by change "index" variable (only 0-2 are available)
 
-`npm install`
+## Available Scripts
 
-3. Run local environment.
+In the project directory, you can run:
 
-`npm start`
+### `npm start`
 
-<a name="scripts" />
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Available scripts
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-`npm start` - run development server with hot reload mode,
+### `npm test`
 
-`npm build` - build distributon package,
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-`npm run lint` - run lints,
+### `npm run build`
 
-`npm run lint:code` - run lint for typescript / javascript files,
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-`npm run lint:style` - run lint for style files,
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-`npm test` - run tests,
-
-`npm run test:watch` - run tests with watch mode,
-
-`npm run test:coverage` - run tests and generate coverage report.
-
-<a name="technology" />
-
-### Technology stack
-
-- [React with Hooks](https://pl.reactjs.org/)
-- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
-- [Typescript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [Sass](https://sass-lang.com/)
-- [Webpack](https://webpack.js.org/)
-- [Husky](https://github.com/typicode/husky)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-
-<a name="information" />
-
-### Useful information
-
-I focused on separate logic from presentation layer of component, so components are created according to this scheme:
-- **index.tsx** - main file with component declaration. You can put here a React Hooks features (eg.: useState, useEffects etc.), prepare component props, do some base logic etc. This file should return component view layer with component props set.
-- **Component.tsx** - file with view layer of component.
-- **Component.scss** - file with component style declaration.
-- **handlers.ts** - file where You can place useful function for component.
-
-Before You commit or push something on repository, Husky will run code lints and tests.
-The configuration files are in the main project folder.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
